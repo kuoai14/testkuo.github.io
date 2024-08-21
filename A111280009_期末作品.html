@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>橫濱流星</title>
+	<style>
+	ul{list-style:none; margin:0; padding:0;}
+	
+	ul.drop-down-menu{
+			list-style:none; margin:0; padding:15px;
+			border:#css 1px solid;
+			display:inline-block;
+			font-family:'Open Sans', Arial, sans-serif;
+			font-size:13px;
+	}
+	ul.drop-down-menu li{
+			position:relative;
+			white-space:nowrap;
+			border-right:#css 1px solid;
+	}
+	ul.drop-down-menu>li:last-child{
+			border-right:none;
+	}
+	ul.drop-down-menu>li{
+			float:left;
+	}
+	ul.drop-down-menu a{
+			background-color:#887e7c;
+			color:white;
+			display:block;
+			padding:0px 30px;
+			text-decoration:none;
+			line-height:40px;
+	}
+	ul.drop-down-menu a:hover{
+			background-color:#ccc4c1;
+			color:#ccc4c1;
+	}
+	ul.drop-down-menu li:hover>a{
+			background-color:#ccc4c1;
+			color:#333;
+	}
+    ul.drop-down-menu ul{
+			position:absolute;
+			z-index:99;
+			top:100%;
+			min-width:180px;
+	}
+	ul.drop-down-menu ul li{
+			border-bottom:#css 1px solid;
+	}
+	ul.drop-down-menu ul li:last-child{
+			border-bottom:none;
+	}
+	ul.drop-down-menu ul ul{
+			z-index:999;
+			top:0%;
+			left:75%;
+	}
+	ul.drop-down-menu ul{
+			display:none;
+	}
+	ul.drop-down-menu li:hover>ul{
+			display:block;
+	}
+	
+
+	.myButton {
+	padding:15px; margin: 0px 20px;
+	align-items: center;
+	box-shadow:inset 0px 0px 0px 0px #887e7c;
+	background-color:#887e7c;
+	border-radius:15px;
+	border:5px solid #887e7c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:微軟正黑體;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b7ae94;
+	}
+	.myButton:hover {
+		background-color:#ccc4c1;
+	}
+	.myButton:active {
+		position:relative;
+		top:1px;
+	}
+	
+	#photos{position:absolute; width:calc(600px*5);z-index:-9;}
+	
+	#imgRun{float:left; width:600px; height:750px;}
+	
+	.play{animation:move 16s ease-in-out infinite; animation-fill-mode:backward;}
+	@keyframes move{
+	0%{transform:translate(0,0);}
+	20%{transform:translate(0,0);}
+	40%{transform:translate(-600px,0);}
+	60%{transform:translate(-1200px,0);}
+	80%{transform:translate(-1800px,0);}
+	100%{transform:translate(-2400px,0);}}
+	
+						
+
+     
+	 header{position:absolute; width:100%; height:15%;
+			top:0%; left:0%;
+			background-image:url(image3/1.png);}
+	 
+	 nav{position:absolute; width:100%; height:10%;
+			top:15%; left:0%;
+			background-color:#ccc4c1; text-align:center;}
+	 
+	section{position:fixed; width:70%; height:68%;
+			top:25%; left:30%; overflow:auto;
+			background-color:hsl(30,100%,90%);}
+	
+	 
+	aside{position:fixed;  width:30%; height:68%;
+			top:25%; left:0%; overflow:hidden;
+			background-color:hsl(30,100%,90%);}
+	 
+	footer{position:fixed; width:100%; height:7%;
+			top:93%; left:0%; 
+			background-image:linear-gradient(0deg, #f2f0f1, #b8af95);} 
+	
+	footer img{margin:5px; width:75px; height:60px; float:right;}
+	footer{text-align:right;}
+	
+	.style01:hover{filter:sepia(50%); transition:1s;}
+	.style02:hover{border:6px solid #604a70;border-radius:100%; transition:0.3s;}
+	.style03:hover{border:6px solid #8e8179;border-radius:100%; transition:0.3s;}
+	.style04:hover{border:6px solid #ccc4c1;border-radius:100%; transition:0.3s;}
+	
+	footer img:hover{width:160px; height:120px; transform:translateY(-50px);}
+	
+	.box01{ width:70%; height:300px;
+			margin-left:auto; margin-right:auto;}
+	.box01 img{ width:215px; height:215px; border-radius:50%; object-fit:cover;}
+	
+		
+	
+	
+	
+
+	.container{
+		position: relative; }
+		
+	.box{
+			position: absolute; 
+			top: 0;             
+			bottom: 0;           
+			left: 0;        
+			right: 0;
+			margin: auto;      
+	}
+		
+	.box4{
+			margin: auto;
+	}
+	
+	.box11 img{ width:350px; height:350px;}
+
+
+
+
+.marqee {
+ height: 4em;
+ margin: 0 auto;
+ overflow: hidden; 
+ position: relative;
+ background:#f2f0f1;
+}
+
+.marqee > ul {
+ padding-left: 0px;
+ display: flex;
+ list-style-type: none;
+ animation: marqee 40s linear infinite;
+ position: absolute;
+}
+
+.marqee > ul > li {
+ white-space: nowrap;
+ margin-right:2em;
+ font-weight: bold;
+ font-size: 1.5em;
+ color: black;
+}
+
+@keyframes marqee {
+ 0% {
+  left: 100%;
+  transform: translateX(0%);
+ }
+
+ 100% {
+  left: 0;
+  transform: translateX(-100%);
+ }
+}
+
+
+
+h1{text-align:center; font-size:1.5em; letter-spacing:3px;}		
+	h1
+	#ex01{text-align:center; font-size:2.3em; font-family:Bradley Hand ITC; letter-spacing:10px;}
+	#ex02{text-align:justify;}
+	#ex04{text-align:center; font-size:3em; font-family:Bradley Hand ITC; letter-spacing:3px; color:white;}
+	#ex05{text-align:center; font-size:2.5em; font-family:     ; letter-spacing:1px; color:black;}
+	#ex06{text-align:left; font-size:2em; font-family:Andale Mono, monospace; letter-spacing:3px; color:black;}
+	#ex07{text-align:center; font-size:1.5em; font-family:Andale Mono, monospace; letter-spacing:3px; color:black;}
+	#ex09{text-align:center; font-size:1em; font-family:Bradley Hand ITC; letter-spacing:3px; color:white;}
+	
+h3{text-align:center; font-size:2em; letter-spacing:0px;}
+h5{text-align:center; font-size:1.5em; letter-spacing:1px;}
+	#ex08{text-align:center; font-size:2em; font-family:Andale Mono, monospace; letter-spacing:1px; color:black;}
+	
+	
+	
+	
+	p#ex03{text-align:center;}
+	#ex10{text-align:center; font-size:1.3em; font-family:Andale Mono, monospace; letter-spacing:1px; color:black;font-weight:bold;}
+	#ex13{text-align:center; font-size:1.3em; font-family:Andale Mono, monospace; letter-spacing:1px; color:black; font-weight:bold;}
+	#ex11{text-align:center; font-size:1.3em; font-family:Andale Mono, monospace;font-weight:bold; letter-spacing:1px; color:black;}
+	#ex12{text-align:center; font-size:2em; font-family:Andale Mono, monospace;font-weight:bold; letter-spacing:2px; color:black;}
+	#ex14{text-align:center; font-size:1em; font-family:Andale Mono, monospace;font-weight:bold; letter-spacing:1px; color:black;}
+	#ex15{text-align:left; font-size:1.3em; font-family:Andale Mono, monospace;font-weight:bold; letter-spacing:1px; color:black;}
+	
+	
+	
+	.textaroundbreak{clear:right;}
+	 
+	</style>
+</head>
+
+
+<body>
+	<header><h1 id="ex04">橫濱流星</h1></header>
+	
+	<div class="box content">
+	
+		<nav>
+		<ul class="drop-down-menu"> 
+			<li><a href="#1" class="myButton">關於流星</a>
+				<ul>
+					<li><a href="#11" class="myButton">基本資料</a></li>
+					<li><a href="#12" class="myButton">喜好</a></li>
+					<li><a href="#13" class="myButton">專長</a></li>
+				</ul>
+			</li>
+			<li><a href="#2" class="myButton">演出作品<div class="arrow-down"></div></a>
+				<ul>
+					<li><a href="#21" class="myButton">電視劇&nbsp;&nbsp;&#707;</a>
+						<ul>
+							<li><a href="#211" class="myButton">DCU</a></li>
+							<li><a href="#212" class="myButton">新聞記者</a></li>
+						</ul></li>
+					<li><a href="#22" class="myButton">電影&nbsp;&nbsp;&#707;</a>
+						<ul>
+							<li><a href="#221" class="myButton">虹色デイズ</a></li>
+							<li><a href="#222" class="myButton">チア男子!!</a></li>
+							<li><a href="#223" class="myButton">嘘喰い</a></li>
+						</ul></li>
+					<li><a href="#23" class="myButton">舞台劇&nbsp;&nbsp;&#707;</a>
+						<ul>
+							<li><a href="#231" class="myButton">巌流島</a></li>
+						</ul></li>
+					<li><a href="#24" class="myButton">MV&nbsp;&nbsp;&#707;</a>
+					<ul>
+							<li><a href="#241" class="myButton">約束 × No title</a></li>
+							<li><a href="#242" class="myButton">くびったけ</a></li>
+							<li><a href="#243" class="myButton">恋人失格</a></li>
+						</ul></li>
+				</ul>
+			</li>
+			<li><a href="#3" class="myButton">音樂作品</a></li>
+			<li><a href="#4" class="myButton">獲獎紀錄</a>
+				<ul>
+				<li><a href="#41" class="myButton">2019</a></li>
+				<li><a href="#42" class="myButton">2020</a></li>
+				<li><a href="#43" class="myButton">2021</a></li>
+				<li><a href="#44" class="myButton">2022</a></li>
+			</ul></li>
+			<li><a href="#5" class="myButton">社群帳號</a>
+				<ul>
+					<li><a href="#51" class="myButton">OFFICIAL WEBSITE</a></li>
+					<li><a href="#52" class="myButton">Étoile Filante</a></li>
+					<li><a href="#53" class="myButton">Instagram</a></li>
+				</ul>
+			</li>
+			<li><a href="#top" class="myButton" align="right">TOP</a></li>
+		
+		</ul>
+		</nav>
+	</div>
+	
+    <main>		 
+		<section align="center">
+			<div id="top"></div>
+			<div class="marqee">
+			<p >
+		 <ul>
+		  <li>電影「アキラとあきら &nbsp;&nbsp;(彬與瑛)」階堂彬&nbsp;&nbsp;2022/8/26&nbsp;&nbsp;日本上映</li>
+		  <li>電影「線は、僕を描く &nbsp;&nbsp;(線，畫出的我)」青山霜介 2022/10/21 日本上映</li>
+		  <li>舞台劇「巌流島」宮本武蔵&nbsp;2023/2〜3月&nbsp;&nbsp;演出預定</li>
+		  <li>電影「ヴィレッジ &nbsp;&nbsp;(Village)」片山優&nbsp;2023年&nbsp;日本上映</li>
+		  <li>電影「春に散る &nbsp;&nbsp;(春天飄零)」黒木翔吾&nbsp;2023年&nbsp;日本上映</li>
+		  
+		 </ul></p>
+		</div>
+			<br>
+			<div class="box01" >
+				<img src="image3/24.png" class="style02">&nbsp;
+				<img src="image3/25.png" class="style03">&nbsp;
+				<img src="image3/26.png" class="style04">
+			</div>
+				
+				<img src="image3/111.jpg" width="817" height="211">
+				
+				<div id="1">
+						
+					<div id="11">
+						<h1 id="ex05">關於流星</h1>
+						<h1 id="ex06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基本資料</h1>
+						
+						<table width="800" height="80" border="10" bordercolor="#c1966c" cellpadding="10" cellspacing="0" align="center">
+							<caption><h1 color="#67482b"></h1></caption>  
+							<colgroup>
+							  <col style="blackground-color:#7e6348">
+							</colgroup>
+							<thead align="center">
+							<p id="ex12">
+							  <tr><td  bgcolor="#FFDCB9"><p id="ex11">姓名</p></td><td><p id="ex13">橫濱流星</p></td><td  bgcolor="#FFDCB9"><p id="ex11">生日</p></td><td><p id="ex13">1996/9/16</p></td></tr>
+							  <tr><td  bgcolor="#FFDCB9"><p id="ex11">生日</p></td><td><p id="ex13">1996/9/16</p></td><td bgcolor="#FFDCB9"><p id="ex11">血型</p></td><td><p id="ex13">O型</p></td></tr>
+							  <tr><td  bgcolor="#FFDCB9"><p id="ex11">職業</p></td><td><p id="ex13">演員、模特兒、歌手</p></td><td  bgcolor="#FFDCB9"><p id="ex11">出道時間</p></td><td><p id="ex13">2009~</p></td></tr>
+							  </p>
+							</thead>
+							
+							<tbody align="center">
+							</tbody>
+							
+							<tfoot>
+							  
+							</tfoot>
+
+						</table>
+					</div>
+				</div>
+				
+				<br>
+				<div id="12">
+				<h1 id="ex06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;喜好</h1>
+				<p id="ex15">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;顏色:紫色、黑色<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;食物:超辣的拉麵、肉、烤地瓜<br>
+				
+				</p>
+				
+				</div>
+				<br>
+				<div id="13">
+				<h1 id="ex06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;專長</h1>
+				<p id="ex15">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;全接觸空手道<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;國三時在世界大賽「2011年 第7屆國際青少年空手道參賽權大會 13・14歲男子-55kg級」<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中獲得優勝，獲得世界第一<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;為了電視劇「DCU」特別去考了水肺潛水執照<br>
+				
+				
+				
+				</p>
+				
+				
+				
+				</div>
+				</div>
+				
+				<br><font color="#7e6348"><h1>&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;</h1>
+			</font><br>
+		
+			<div id="2">
+			<h1 id="ex05">演出作品</h1>
+			
+			<div id="21">
+				<h1 id="ex06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;電視劇</h1>
+				
+				<div id="211"><img src="image3/5.jpg" width="600" height="420"></div>
+				<h3>DCU</h3>
+				
+				<p id="ex10">
+				這部電視劇是以水中偵查為主的架空組織「ＤＣＵ（Deep Crime Unit）」為舞台設定的TBS原創電視劇<br>
+				電視劇中的海上保安廳新設立了一個名為「ＤＣＵ」的組織<br>
+				ＤＣＵ是Deep Crime Unit（潛水特殊搜查隊）的簡稱<br>
+				他們負責搜查水中事件、事故等<br>
+				不管多困難的任務都難不倒他們<br>
+				</p>
+				<br>
+				<div id="212"><img src="image3/6.jpg" width="600" height="336"></div>
+				<h3>新聞記者</h3>
+				
+				<p id="ex10">
+				正義感滿滿的報社記者對上內閣內的黑暗<br>
+				究竟最後是否能將真相暴露在光明下?<br>
+				</p>
+				<br>
+			</div>
+
+			
+			<div id="22">
+			<h1 id="ex06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;電影</h1>
+			<div id="12">
+			<div id="221"><img src="image3/7.jpg" width="601" height="338"></div>
+			<h3>
+			虹色デイズ&nbsp;&nbsp;(虹色Days)
+			</h3>
+			<p id="ex10">
+			電影『虹色Days』是在講述4個吵吵鬧鬧的男子高中生<br>
+			充滿著「友情」與「愛情」<br>
+			令人感動的青春物語<br>
+			在面對友情、愛情與升學時<br>
+			與夥伴們一起歡笑、一起煩惱、一起體驗只有一次的青春<br>
+			完全不同性格的4人一起度過的美好時光<br>
+			在這夏天，將這青春永遠刻在心中<br>
+
+			</p><br>
+			
+			<div id="222"><img src="image3/8.jpg" width="600" height="338"></div>
+			<h3>
+			チア男子!!&nbsp;&nbsp;(男子啦啦隊)
+			</h3>
+			<p id="ex10">
+			晴希生為柔道場的長男，從小便在柔道的世界成長<br>
+			但與每戰必勝的姐姐相比之下覺得自己沒什麼才能<br>
+			剛好晴希在一次的練習中受了傷，藉此與柔道拉凱了距離<br>
+			並在好友一馬的邀請下一起創立了「男子啦啦隊社」......<br><br>
+			此故事改編自早稻田大學男子啦啦隊社成立時的故事<br>
+			</p><br>
+			
+			<div id="223"><img src="image3/9.jpg" width="600" height="315"></div>
+			<h3>
+			嘘喰い&nbsp;&nbsp;(嗜謊者)
+			</h3>
+			
+			<p id="ex10">
+			如果謊言被識&nbsp;&nbsp;即死──。<br>
+			天才賭徒(大夢想家)“嗜謊者”斑目貘<br>
+			斑目宣布要向一個藏在日本政治界背後的會員制賭博俱樂部“賭郎”挑戰<br>
+			謊言&nbsp;vs&nbsp;謊言。<br>
+			最後的贏家是......?<br>
+			</p><br>
+			</div>
+			
+			<div id="23">
+			<h1 id="ex06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;舞台劇</h1>
+			
+			<div id="221"><div id="231"><img src="image3/10.jpg" width="600" height="373"></div>
+			<h3>
+			巌流島
+			</h3>
+			<p id="ex10">生か死か…！<br>
+	宮本武蔵と佐々木小次郎、<br>
+	歴史に名を残す２人の剣豪による<br>
+	世紀の対決「巌流島の戦い」。<br>
+	武蔵と小次郎はどこで出会い、どんな人生を歩んで来たのか、<br>
+	なぜ戦わなければならなかったのか…！<br><br>
+
+	「関ヶ原の戦い」で落武者となった２人が<br>
+	武芸者として名を轟かせるまでに成長し、<br>
+	闘い続けること、強敵を斬り斃すことで、<br>
+	ひたすら剣の道を突き進んで行きます。<br><br>
+
+	お互いを認め合いつつも、
+	討ち破ってこそ、本懐を遂げられると信じ、<br>
+	武蔵と小次郎は運命に導かれるように、<br>
+	最後の大一番に挑みます！<br><br>
+
+	新解釈、新設定で書き下ろし、<br>
+	武士もののふの生き様を問う骨太の人間ドラマを描き出します。<br>
+	横浜流星が主演で宮本武蔵、中村隼人が佐々木小次郎を演じ、<br>
+	堤幸彦の演出により、迫力と感動のアクション時代劇、<br>
+	令和版『巌流島』を新たに創作します！<br>
+			</p><br>
+			
+			</div></div>
+			
+			<div id="24"><div id="241">
+			<h1 id="ex06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music Video</h1>
+			<br>
+			
+			<video src="video3/456.mp4" controls height="315px" width="560px"></video>
+			</div>
+			<p id="ex11">
+			約束 × No title / GReeeeN
+			</p>
+			<br><br>
+			
+			<div id="242">
+			<video src="video3/123.mp4" controls width="560" height="315"></video>
+			
+			</div>
+			<p id="ex11">
+			くびったけ / yama
+			</p><br><br>
+			
+			<div id="243">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/B-r5fWPWEjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<p id="ex11">
+			恋人失格 / みゆはん
+			</p><br><br>
+			</div>
+			
+			
+			
+			
+			<br><font color="#7e6348"><h1>&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;</h1>
+		</font><br>
+		
+			<div id="3">
+			<h1 id="ex05">音樂作品</h1>
+			
+			<img src="image3/3.jpg" width="300" height="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img src="image3/4.jpg" width="300" height="300">
+			
+			<p id="ex11">
+			未完成 / 橫濱流星&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			聲 / Green boys
+			</p>
+			
+			<div id="music">
+				<audio src="music3/mimansen.mp3" controls style="width:350px"></audio>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<audio src="music3/koe.mp3" controls style="width:350px"></audio>
+			</div></div>
+			
+			<br><font color="#7e6348"><h1>&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;</h1>
+		</font><br><br><br>
+		
+			<div id="4"><div id="41">
+			<h1 id="ex05">獲獎紀錄</h1>
+			
+
+	<p id="ex11">2019年</p>
+	<p id="ex10">第100回ザテレビジョンドラマアカデミー賞 助演男優賞（『初めて恋をした日に読む話』）<br>
+	Yahoo!検索大賞2019「大賞」「俳優部門賞」<br>
+	ORICON NEWS 2019年上半期 ブレイク俳優ランキング 第1位<br>
+	andGIRL「流行大賞」企画「イケメン大賞」第1位</p>
+	</div>
+
+	<div id="42"><p id="ex11">2020年</p>
+	<p id="ex10">第43回日本アカデミー賞 新人俳優賞<br>（『愛唄-約束のナクヒト-』『チア男子!!』『いなくなれ、群青』）<br>
+	日本映画テレビプロデューサー協会 2020年エランドール賞 新人賞（TVガイド賞）<br>
+	エル シネマアワード2020「エル メン賞」（『きみの瞳が問いかけている』）</p>
+	</div>
+
+	<div id="43"><p id="ex11">2021年</p>
+	<p id="ex10">日本ジュエリー協会「第32回日本ジュエリーベストドレッサー賞」男性部門</p>
+	<div id="44"><p id="ex11">2022年</p>
+	<p id="ex10">第14回TAMA映画賞 最優秀新進男優賞<br>（『流浪の月』『アキラとあきら』『嘘喰い』『あなたの番です 劇場版』『DIVOC-12』）<br>
+	釜山国際映画祭 第4回アジアコンテンツアワード ニューカマー賞（Netflixドラマ『新聞記者』）<br>
+	第47回報知映画賞 助演男優賞（『流浪の月』）</p>
+	</div><br>
+
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/DOWps9Z0SDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br><p id="ex11">第14回「TAMA映画賞」授賞式</p><br><br>
+			</div>
+			
+			<br><font color="#7e6348"><h1>&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;&times;&times;&times;&mdash;&mdash;&mdash;</h1>
+		</font><br>
+		
+			<div id="5"><div id="51">
+			<h1 id="ex05">社群帳號</h1><p id="ex11">(點擊圖片連至網站)</p>
+			
+			<a href="https://official.stardust.co.jp/yokohamaryusei/index.html" target="_blank" align="left">
+			<img src="image3/20.png" height="300" width="600">
+			</a>
+			<h1 id="ex07">RYUSEI YOKOHAMA OFFICIAL WEBSITE</h1></div>
+			<br><br><br>
+			<div id="52">
+			<a href="https://www.yokohamaryusei-fc.jp/" target="_blank" align="left">
+			<img src="image3/21.png" height="300" width="600">
+			</a>
+			<h1 id="ex07">Étoile Filante</h1></div>
+			<br><br><br>
+			<div id="53">
+			<a href="https://www.instagram.com/ryuseiyokohama_official/" target="_blank" align="left">
+			<img src="image3/22.png" height="318" width="800">
+			</a>
+			<h1 id="ex07">Instagram</h1></div>
+			<br><br><br>
+			
+			</div>
+		
+		</section>
+		
+		<aside>
+			<div id="photos" class="play">
+				<img id="imgRun" src="image3/2.jpg">
+				<img id="imgRun" src="image3/31.jpg">
+				<img id="imgRun" src="image3/32.jpg">
+				<img id="imgRun" src="image3/34.jpg">
+				<img id="imgRun" src="image3/33.jpg">
+			</div>
+		</aside>
+    </main>
+	
+	<footer>
+		<p id="ex14">*本網站日文部分皆由本人郭佳嬡自由翻譯</p>
+		
+	
+		
+	
+	</footer> 
+</body>
+</html>
